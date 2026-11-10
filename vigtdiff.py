@@ -65,7 +65,7 @@ class VIGTDiff(nn.Module):
         # ===== short
         self.short_window = int(args.short_window)
         self.fusion_alpha = float(args.fusion_alpha)
-        self.short_noise_scale = 0.09
+        self.short_noise_scale = 0.25
         self.short_gate_scale = 0.70
         self.div_top_m = 25
         # short no longer uses prototype quantization; keep guidance token-level
