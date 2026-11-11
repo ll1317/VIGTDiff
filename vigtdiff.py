@@ -361,7 +361,7 @@ class VIGTDiff(nn.Module):
     def short_intent_cluster(self, input, n_clusters, mask_seq):
         B, L, D = input.shape
 
-        raw_scales = [2, self.short_window, self.short_window + 2]
+        raw_scales = [self.short_window-2, self.short_window, self.short_window + 2]
         scale_list = []
         for scale in raw_scales:
             scale = max(1, min(int(scale), L))
